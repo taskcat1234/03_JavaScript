@@ -68,7 +68,10 @@ function deposit(){
 function withdrawal(){
   const v1 = Number(amount.value);
   if(v1 < 0 || v1 > balance){
-    alert("금액에 오류가있습니다.");
+    // alert("금액에 오류가있습니다.");
+    // 삼항 연산자 ->  조건식 ? 참 : 거짓;
+    const result = v1 < 0 ? "금액이 작습니다" : "금액이 잔액보다 큽니다";
+    alert(result);
     return;
   }
   const pw = prompt("비밀번호를 입력하세요");
