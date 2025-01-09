@@ -108,3 +108,49 @@ test1.addEventListener("click", function(){
   let num = Number(test1.innerText);
   test1.innerText = ++num;
 });
+
+/* 버튼 배경색 변경 + 클릭시 #rseult2 배경색 변경 */
+
+// querySelectorAll -> 선택자가 일치하는 요소를 모두 반환(배열)
+const btns = document.querySelectorAll(".btn-container > button");
+// btns <= 배열
+const result2 = document.querySelector("#result2");
+
+
+for(let i = 0 ; i < btns.length ; i++){
+  // 각 버튼의 배경색을 버튼에 작성된 색상으로 변경
+  btns[i].style.backgroundColor = btns[i].innerText;
+  // 각 버튼에 클릭 되었을 때(이벤트 리스너)의
+  // 동작(이벤트 핸들러)을 추가
+  btns[i].addEventListener("click", function(){
+
+    //this == 클릭된 요소
+    //result2.style.backgroundColor = this.innerText; //로도 가능함
+    // result2의 배경색을 클릭된 버튼에 작성된 색상으로 변경
+    result2.style.backgroundColor = btns[i].innerText;
+  });
+}
+
+/* 실습 문제 */
+/* 
+  "변경하기" 버튼 클릭 시
+  input 요소에 작성된 색상 값을 얻어와
+  바로 위 .display 요소의 배경색 변경하기
+*/
+
+
+// a.addEventListener("click", function() 클릭 감지를 위해 a변수인
+// const a = document.querySelector("#changeBtn"); 를 선언을 해줘야된다.
+// const v1 = document.querySelectorAll(".inputColor");
+// const v2 = document.querySelectorAll(".display");
+// 위에 v1 , v2는 html에서 값을 얻어오는 배열이다. v1의 경우 써진 글을 가져온다
+// v2는 배경지정을 위한 값을 가져온다
+const a = document.querySelector("#changeBtn");
+const v1 = document.querySelectorAll(".inputColor");
+const v2 = document.querySelectorAll(".display");
+a.addEventListener("click", function(){ // a 즉 #changeBtn 이 클릭되었을때 작동을 시작한다
+  for(let i = 0 ; i < v1.length ; i++){ // 루프 v1의 값 을 가져와 그 값만큼 루프한다
+    v2[i].style.backgroundColor = v1[i].value; //v2에 스타일,백그라운드 컬러 라는 값을 v1에 적힌 값을 대입해서 넣는다
+    // 단 v1[i].value; 은 innerText; 과 innerHTML;로 하면 안되고 value를 써야된다.
+  }
+});
