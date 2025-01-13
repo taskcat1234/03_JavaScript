@@ -1,41 +1,45 @@
-const v1 = document.getElementById("1");
-const v2 = document.getElementById("2");
-const v3 = document.getElementById("3");
 const v4 = document.getElementById("apple");
 const v5 = document.getElementById("banana");
 const v6 = document.getElementById("melon");
 const sumBtn = document.querySelector("btn");
-
-const apple = 2000;
-const banana = 3000;
-const melon = 5000;
-
-// 메뉴별 주문 개수를 저장할 카운트 변수 선언
-let aCount = 0;
-let bCount = 0;
-let mCount = 0;
-let Count = 0;
-let v7 = "";
-
 btn.addEventListener("click", function(){
+  let v1 = document.getElementById('1').value;
+  let v2 = document.getElementById('2').value;
+  let v3 = document.getElementById('3').value;
+  v1 = Number(v1);
+  v2 = Number(v2);
+  v3 = Number(v3);
+  let aCount = 0;
+  let bCount = 0;
+  let mCount = 0;
+  let Count = 0;
+  let v7 = "";
+  const apple = 2000;
+  const banana = 3000;
+  const melon = 5000;
   result.innerHTML ="";
   if(v4.checked){
-    Count += v1 * apple
-    if (aCount){
-      v7 += `사과 ${aCount}개`
+    Count += v1 * apple;
+    aCount += v1;
+    if (aCount > 0){
+      v7 += `사과 ${aCount}개 `
     }
   } 
   if(v5.checked){
-    Count += v2 * banana
-    v7 += `사과 ${aCount}개`
+    Count += v2 * banana;
+    bCount += v2;
+    if (bCount > 0){
+      v7 += `바나나 ${bCount}개 `
+    }
   } 
   if(v6.checked){
-    Count += v3 * melon
-    v7 += `사과 ${aCount}개`
+    Count += v3 * melon;
+    mCount += v3;
+    if (mCount > 0){
+      v7 += `멜론 ${mCount}개`
+    }
   } 
-  Count = aCount + bCount + mCount
-  //총합 23000원
-  result.innerHTML = `종합 ${Count}원`;
+  result.innerHTML = `${v7} 종합 ${Count}원`;
 });
 
 
