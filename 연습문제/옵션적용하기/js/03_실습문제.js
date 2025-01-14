@@ -2,7 +2,7 @@ const v4 = document.getElementById("apple");
 const v5 = document.getElementById("banana");
 const v6 = document.getElementById("melon");
 const sumBtn = document.querySelector("btn");
-btn.addEventListener("click", function(){
+btn.addEventListener("click", () => {
   let v1 = document.getElementById('1').value;
   let v2 = document.getElementById('2').value;
   let v3 = document.getElementById('3').value;

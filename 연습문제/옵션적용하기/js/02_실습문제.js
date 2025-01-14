@@ -8,9 +8,6 @@ for (let number of numbers){
   number.addEventListener("click",(e) => {
     if(v2.innerText.length<10){
     v2.innerText += e.target.innerText;
-    for(let i=0; i < boxes ; i++){
-
-      }
     }else{
       alert("10자 까지만 입력할 수 있습니다.")
     }
