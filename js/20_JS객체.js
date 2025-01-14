@@ -228,6 +228,14 @@ selectStudent.addEventListener("click", () => {
 
     // tbody에 tr추가
     tbody.append(tr)
+
+    // 이름이 작성된 요소(td1)가 클릭 되었을 떄
+    td1.addEventListener("click",() => {
+      alert(std.inform()); // inform 메서드 반환 결과 alert 출력
+    });
+
+
+
   });
   
   // #total에 인원 수 출력
@@ -241,3 +249,28 @@ selectStudent.addEventListener("click", () => {
     // index : 현재 반복 접근 중인 index 값
 
   }) */
+
+/* JSON */
+const checkJson = document.querySelector("#checkJson");
+checkJson.addEventListener("click", ()=>{
+  //JS 객체 생성
+  const user = {
+    "id" : "user01",
+    "pw" : "pass01",
+    "email" : "user01@naver.com",
+    "phone" : "010-1234-1234"
+  };
+
+  console.log("user : ", user, typeof user);
+
+  // JSON.stringify(JS객체) : JS객체 -> JSON(문자열)
+  console.log("JSON.stringify(user) :",JSON.stringify(user),typeof JSON.stringify(user));
+
+  const menu = '{"name" : "김밥","price" : 4000}';
+  console.log("menu : ", menu , typeof menu);
+
+  // JSON.parse(JSON문자열) : JSON문자열 -> JS 객체
+  console.log(JSON.parse(menu), typeof JSON.parse(menu));
+
+
+});
