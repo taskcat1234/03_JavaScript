@@ -110,5 +110,6 @@ body{
 }
 
 .cle {
-  color: red; /* 예시로 배경색을 변경 */
+  width: 140px;
+  display: inline-block;
 }

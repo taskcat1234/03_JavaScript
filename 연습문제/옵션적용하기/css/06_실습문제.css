@@ -1,0 +1,79 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* main{
+  border: 1px solid black;
+} */
+
+div>span{
+  font-size: 28px;
+  font-weight: bold;
+}
+ul{
+  width: 800px;
+  height: 500px;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+.res-name-container{
+  margin-top: 50px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.btn-container{
+  display: flex;
+  justify-content:flex-end;
+}
+.menu-container{
+  /* list-style-type: none; */
+  padding-left: 0px;
+  flex-wrap: wrap;
+  display: flex;
+  align-content: flex-start;
+  flex-direction: column;
+}
+/* .menu-price{
+  
+} */
+.menu{
+  width: 33.33%;
+  height: 20%;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  font-size: 20px;
+  align-items: center;
+}
+.row123{
+  float: left
+}
+
+.b-hidden{
+  display : none;
+}
+
+.btn-container > button {
+  margin-top: 10px;
+  width: 100px;
+  height: 30px;
+}
+.res-name-hidden {
+  display : none;
+}
+#resNameInput{
+  width: 480px;
+  height: 40px;
+}
