@@ -46,7 +46,55 @@
 
   <button id="btn1">for in 확인하기</button>
 
+  <hr>
+  <h1>구조 분해 할당</h1>
+  <pre>
+    - 배열이나 객체에 저장된 값을 쉽게 추출하여
+      지정된 변수에 대입하는 문법
 
+    - 가독성 증가를 위해서 사용
+
+    <hr>
+
+    [배열 + 구조 분해 할당]
+    const fruits = ['사과', '바나나', '오렌지'];
+    
+    const first = fruits[0]; // '사과'
+    const second = fruits[1]; // '바나나'
+    const thrid = fruits[2]; // '오렌지'
+
+    // 위에 변수 선언/대입 구문을 구조분해 할당으로 변경
+    const [first, second, third] = fruits;
+
+    [객체 + 구조 분해 할당]
+    const person = {name : "홍길동", age : 25, height : 180};
+    // 기존 방법
+    const name   = person.name;
+    const age    = person.age;
+    const height = person.height;
+    const {name, age, height} = person;
+  </pre>
+
+  <button id="btn2">구조 분해 할당 확인</button>
+
+  <hr>
+  <h1>...(전개,나열) 연산자</h1>
+  <pre>
+    - 객체나 배열의 요소를 개별적으로 분리, 결합할때 사용하는 연산자
+    
+    ex)
+    const arr = [1,2,3];
+    // ...arr === [1,2,3] 에서 []기호를 뺀모습
+
+    - 언재 사용???
+      배열 : 배열 복사, 배열 결합, 배열 요소 24_추가
+
+      객체 : 객체 복사, 객체 병합, 속성 덮어 쓰기
+  </pre>
+
+  <button id="btn3">배열 + ... 연산자</button>
+  
+  <button id="btn4">객체 + ... 연산자</button>
 
 
 

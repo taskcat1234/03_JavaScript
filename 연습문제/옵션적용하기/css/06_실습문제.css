@@ -22,8 +22,8 @@ div>span{
 ul{
   width: 800px;
   height: 500px;
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
+  border-top: 3px solid black;
+  border-bottom: 3px solid black;
 }
 
 .res-name-container{
@@ -74,6 +74,12 @@ ul{
   display : none;
 }
 #resNameInput{
-  width: 480px;
+  width: 700px;
   height: 40px;
+  font-size: 30px;
+  margin-left: 5px;
+}
+
+#resName{
+  padding-left: 5px;
 }
