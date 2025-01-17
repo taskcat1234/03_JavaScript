@@ -1,0 +1,13 @@
+.container{
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.input-section{
+  width: 50%;
+}
+
+.input-group{
+  flex-direction: column;
+}
