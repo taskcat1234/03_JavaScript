@@ -1,0 +1,29 @@
+.out{
+  height: 450px;
+  width: 250px;
+  border: 1px solid black;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.number{
+  width: 30px;
+  height: 30px;
+  border: 1px solid black;
+  text-align: center;
+  display: flex;
+  cursor: pointer;    /* 커서 손가락 */
+  user-select: none; /* 블럭 막기 */
+  justify-content: center;
+  margin: 9px;
+  border-radius: 50%;
+  align-items: center;
+}
+
+.color1{
+  background-color: blueviolet;
+}
+
+.hidden{
+  display : none;
+}
